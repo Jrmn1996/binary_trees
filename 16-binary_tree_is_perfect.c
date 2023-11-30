@@ -9,6 +9,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	int h8;
 	int size;
 	int perfect_num;
+
 	if (tree == NULL)
 		return (0);
 	if (tree->left == NULL && tree->right != NULL)
@@ -67,7 +68,7 @@ size_t measure_size(const binary_tree_t *tree)
  * fpow - calculates x raised to the power of y
  * @x: base
  * @y: exponent
- * Return: x raised to power of y or -1 if y < 0 
+ * Return: x raised to power of y or -1 if y < 0
  */
 int fpow(int x, int y)
 {
