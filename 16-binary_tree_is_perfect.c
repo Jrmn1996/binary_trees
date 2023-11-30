@@ -17,7 +17,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 		return (0);
 	h8 = measure_height(tree);
 	size = measure_size(tree);
-	perfect_num = my_pow(2, h8) - 1;
+	perfect_num = fpow(2, h8) - 1;
 	if (size == perfect_num)
 		return (1);
 	else
@@ -64,16 +64,16 @@ size_t measure_size(const binary_tree_t *tree)
 }
 
 /**
- * pow - calculates x raised to the power of y
+ * fpow - calculates x raised to the power of y
  * @x: base
  * @y: exponent
  * Return: x raised to power of y or -1 if y < 0 
  */
-int pow(int x, int y)
+int fpow(int x, int y)
 {
 	if (y < 0)
 		return (-1);
 	if (y == 0)
 		return (1);
-	return (x * pow(x, y - 1));
+	return (x * fpow(x, y - 1));
 }
